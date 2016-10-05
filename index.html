@@ -1,94 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Random Facts Quiz</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Random Trivia Quiz</title>
 </head>
-
 <body>
-	
-	<!--HTML for initial state of app -->
-	<div class="beginning">
-	<h1>Welcome to the Random Quiz!</h1>
-	<input type="button" class="initial_submit" value="Let's Go!">
-	</div>
-
-    <!--HTML for questions(h2) and answers(h3) -->
-    <div class="question_holder">
-        <h2 class="question">1. What structure was the design inspiration for the Empire State Building?</h2>
-        <div class="answer_holder">
-            <input type="radio" class="answer">The White House</br>
-            <input type="radio" class="answer">Sears Tower</br>
-            <input type="radio" class="answer">Reynolds Building</br>
-            <input type="radio" class="answer">Chrysler Building</br>
-        </div>
-        <div class="button_holder">
-            <input type="button" class="submit" value="Submit Answer">
-        </div>
-    </div>
     
-    <div class="question_holder">
-        <h2 class="question">2. Which country has the highest tea drinkers per capita?</h2>
-        <div class="answer_holder">
-            <input type="radio" class="answer">India</br>
-            <input type="radio" class="answer">China</br>
-            <input type="radio" class="answer">England</br>
-            <input type="radio" class="answer">Turkey</br>
-        </div>
-        <div class="button_holder">
-            <input type="button" class="submit" value="Submit Answer">
-        </div>
-    </div>
-    
-    <div class="question_holder">
-        <h2 class="question">3. What was the first airline to show in-flight movies on international routes?</h2>
-        <div class="answer_holder">
-            <input type="radio" class="answer">Pan AM</br>
-            <input type="radio" class="answer">PIA</br>
-            <input type="radio" class="answer">Lufthansa</br>
-            <input type="radio" class="answer">Cathay Pacific</br>
-        </div>
-        <div class="button_holder">
-            <input type="button" class="submit" value="Submit Answer">
-        </div>
-    </div>
-    
-    <div class="question_holder">
-        <h2 class="question">4. When was the first fashion magazine published?</h2>
-        <div class="answer_holder">
-            <input type="radio" class="answer">1586</br>
-            <input type="radio" class="answer">1686</br>
-            <input type="radio" class="answer">1786</br>
-            <input type="radio" class="answer">1886</br>
-        </div>
-        <div class="button_holder">
-            <input type="button" class="submit" value="Submit Answer">
-        </div>
-    </div>
-    
-    <div class="question_holder">
-        <h2 class="question">5. What is a group of crows called?</h2>
-        <div class="answer_holder">
-            <input type="radio" class="answer">A herd</br>
-            <input type="radio" class="answer">A colony</br>
-            <input type="radio" class="answer">A murder</br>
-            <input type="radio" class="answer">A band</br>
-        </div>
-        <div class="button_holder">
-            <input type="button" class="submit" value="Submit Answer">
-        </div>
+    <div id="opening_page">
+        <h1 id="welcome">Welcome to the Random Trivia Quiz!</h1>
+        <button id="start">Let's play!</button>
+        <img src="assets/KeepCalm_OpeningPage.png" id="opening_image">
     </div>
 
-	<!--HTML for results section -->
-	<div class="ending">
-	<h1>You got X out of 5 right!</h1>
-	<input type="button" class="again" value="Try again">
-	</div>
+    <div id="question_page">
+        <div id="question_image"></div>
+        <h1 id="question"></h1>
+        <ul id="answer_choices"></ul>
+        <div id="submit_answer"></div>
+    </div>
 
+    <div id="answer_page_correct">
+        <div id="answer_image"></div>
+        <h1 id="correct_message"></h1>
+        <div id="score"></div>
+        <h3 id="answer_blurb"></h3>
+        <button id="next_question">Next Question</button>
+    </div>
+
+    <div id="answer_page_incorrect">
+        <div id="incorrect_answer_image"></div>
+        <h1 id="incorrect_message"></h1>
+        <div id="score"></div>
+        <div id="next_question"></div>
+    </div>
+
+    <div id="last_page">
+        <h1 id="ending_message"></h1>
+        <div id="score"></div>
+        <button id="play_again">Play Again!</button>
+        <img src="assets/LifeIsRandom_ClosingPage.png" id="ending_image">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/questions.js"></script>
 </body>
-
 </html>
+
+
